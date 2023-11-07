@@ -4,7 +4,7 @@ pipeline{
     stages{
         stage('Git Checkout'){
             steps{
-                script
+                Script
                     git branch: 'main', url: 'https://github.com/krishbeck/mrdevops_java_app.git'
             }
         }
