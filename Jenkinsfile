@@ -1,3 +1,4 @@
+@library('my-shared-library') _
 pipeline{
     agent any 
     
@@ -7,9 +8,10 @@ pipeline{
 
             steps{
 
-                script{
-                    git branch: 'main', url: 'https://github.com/krishbeck/mrdevops_java_app.git'
-                }
+                gitCheckout(
+                    branch: "main",
+                    url: "https://github.com/krishbeck/mrdevops_java_app.git"
+                )
             }
 
         }
